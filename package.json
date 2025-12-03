@@ -1,0 +1,49 @@
+{
+  "name": "@2080code/pic-processer",
+  "version": "0.0.1",
+  "description": "图片压缩、File和base64互转",
+  "main": "index.js",
+  "types": "./src/types.ts",
+  "type": "module",
+  "node": ">=20.0.0",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "del \"dist\" \"lib\" /s/q/f && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2080code/pic-processer.git"
+  },
+  "keywords": [
+    "watermark",
+    "html",
+    "svg",
+    "js",
+    "css",
+    "background",
+    "canvas"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Warren Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2080code/pic-processer/issues"
+  },
+  "homepage": "https://github.com/2080code/pic-processer#readme",
+  "dependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "tslib": "^2.8.1"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,18 @@
+
+{
+    "include": [
+        "./src/**/*",
+        "rollup.config.js",
+        "types/types.ts"
+    ],
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "es2015",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "removeComments": true,
+        "allowUmdGlobalAccess": true
+    }
+}
