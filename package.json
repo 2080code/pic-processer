@@ -1,7 +1,7 @@
 {
   "name": "@2080code/pic-processer",
   "version": "0.0.1",
-  "description": "图片压缩、File和base64互转",
+  "description": "图片压缩、改变图片尺寸、File 和 dataURL 互转",
   "main": "index.js",
   "types": "./src/types.ts",
   "type": "module",
