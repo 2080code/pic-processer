@@ -8,7 +8,7 @@ npm install @2080code/pic-processer
 
 ## 使用
 ```javascript
-import picProcesser from '@2080code/pic-processer'
+import PicProcesser from '@2080code/pic-processer'
 ```
 或
 ```html
