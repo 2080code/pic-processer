@@ -8,7 +8,7 @@ npm install @2080code/pic-processer
 
 ## 使用
 ```javascript
-import { compress, getDataURL, toFile } from '@2080code/pic-processer'
+import picProcesser from '@2080code/pic-processer'
 ```
 或
 ```html
@@ -18,10 +18,10 @@ import { compress, getDataURL, toFile } from '@2080code/pic-processer'
 例子：
 ```javascript
 // 使用前先实例化一个对象：
-const picProcesser=new PicProcesser()
+const picProcesser = new PicProcesser()
 // 应用：
 picProcesser.getDataURL(file)
-picProcesser.compress(file,0.2)
+picProcesser.compress(file, 0.2)
 picProcesser.getDataURL(file)
 ```
 
@@ -30,7 +30,7 @@ picProcesser.getDataURL(file)
 压缩图片质量、改变图片尺寸，输出 dataURL
 
 ```javascript
-picProcesser.compress(file,0.2,1000,'image/png')
+picProcesser.compress(file, 0.2, 1000, 'image/png')
 ```
 #### 参数
 参数|类型|默认值|说明
@@ -67,7 +67,7 @@ picProcesser.getDataURL(file)
 dataURL 转 File 对象
 
 ```javascript
-picProcesser.dataURLtoFile('export.jpg',dataURL)
+picProcesser.dataURLtoFile('export.jpg', dataURL)
 ```
 
 #### 参数
