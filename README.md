@@ -1,5 +1,11 @@
-# pic-processer
-图片压缩、改变图片尺寸、File 和 dataURL 互转
+# @2080code/pic-processer
+![NPM Version](https://img.shields.io/npm/v/%402080code%2Fpic-processer?label=NPM%20Version)
+![npm package minimized gzipped size](https://img.shields.io/bundlejs/size/%402080code%2Fpic-processer?format=both&label=NPM%20Package%20Size)
+![NPM Last Update](https://img.shields.io/npm/last-update/%402080code%2Fpic-processer?label=NPM%20Last%20Update)
+![NPM Downloads](https://img.shields.io/npm/dw/%402080code%2Fpic-processer?label=NPM%20Downloads)
+
+## 介绍
+用来对图片做压缩，把 File 对象转为 dataURL，又或者把 dataURL 转为 File 对象。
 
 ## 安装
 ```bash
