@@ -7,14 +7,14 @@
 ## 介绍
 用来对图片做压缩，把 File 对象转为 dataURL，又或者把 dataURL 转为 File 对象。
 
----
+***
 
 ## 安装
 ```bash
 npm install @2080code/pic-processer
 ```
 
----
+***
 
 ## 使用
 ```javascript
@@ -35,7 +35,7 @@ picProcesser.compress(file, 0.2)
 picProcesser.getDataURL(file)
 ```
 
----
+***
 
 ## 方法
 ### compress
@@ -59,7 +59,7 @@ picProcesser.compress(file, 0.2, 1000, 'image/png')
 
 *注意：因为是借助 canvas 渲染输出，几乎是重绘了图片，所以如果压缩比率（`ratio`）设置得太高，最终文件字节可能会比原图更大*
 
----
+***
 
 ### getDataURL
 File 转 dataURL
@@ -70,14 +70,14 @@ picProcesser.getDataURL(file)
 ##### 参数
 参数|类型|默认值|说明
 ---|---|---|---
-`file` | File|Blob | `null` | 图片文件
+`file` | File \| Blob | `null` | 图片文件
 
 ##### 返回
 返回值|类型|说明
 ---|---|---
 `Promise<FileReader>` | `Promise<FileReader>` | 完整的 FileReader 对象，通过`result`属性获取 base64 编码
 
----
+***
 
 ### dataURLtoFile
 dataURL 转 File 对象

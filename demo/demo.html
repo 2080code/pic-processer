@@ -99,7 +99,11 @@
         <dl>
             <dt><h2>dataURLtoFile</h2></dt>
             <dd>
-                通过以上 compress 方法输出的 dataURL 被转为 File 对象后的信息:
+                <label for="exported-file-name">输入文件名：</label>
+                <input type="text" id="exported-file-name" placeholder="请输入文件名" onchange="handle()"/>
+            </dd>
+            <dd>
+                通过上面 compress 方法输出的 dataURL 被转为 File 对象后的信息:
                 <div id="file-info"><em>请先在 compress 中选择文件</em></div>
             </dd>
         </dl>
@@ -138,7 +142,8 @@
             compressPreview.style.display='initial'
 
             // about dataURLtoFile
-            const exportedFile=await picProcesser.dataURLtoFile(file.name,compressedDataURL)
+            const exportedFileName=document.getElementById('exported-file-name')
+            const exportedFile=await picProcesser.dataURLtoFile(exportedFileName.value||file.name,compressedDataURL)
             document.getElementById('compress-result').innerHTML=`
                 original file size: <em>${file.size} byte</em>,
                 compressed file size: <em>${exportedFile.size} byte</em>

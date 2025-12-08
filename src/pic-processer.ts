@@ -1,10 +1,11 @@
 /**
- * compress for picture
+ * picture processer
+ * 用来对图片做压缩，把 File 对象转为 dataURL，又或者把 dataURL 转为 File 对象。
  * @author Warren
  */
 
 /**
- * 转为dataURL
+ * File 转为dataURL
  * @param {File,Blob} file
  * @returns {Promise}
  */
@@ -96,7 +97,7 @@ function compress(file:File|Blob, ratio:number = 0.5, maxWidth:number = null,mim
 }
 
 /**
- * dataURL 转 File
+ * dataURL 转为 File
  * @param {String} fileName 文件名
  * @param {String} dataURL
  * @returns {File}
