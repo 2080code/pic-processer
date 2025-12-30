@@ -22,7 +22,7 @@ import PicProcesser from '@2080code/pic-processer'
 ```
 或
 ```html
-<script src="lib/pic-processer.min.js"></script>
+<script src="dist/pic-processer.min.js"></script>
 ```
 
 例子：
@@ -48,6 +48,11 @@ picProcesser.compress(file, 0.2, 1000, 'image/png')
 参数|类型|默认值|说明
 ---|---|---|---
 `file` | File | `null` | 图片文件
+`options` | [PicProcesser.CompressOptions](######PicProcesser.CompressOptions) | `{ratio: 0.5, maxWidth: null,mime:'image/jpeg'}` | 压缩选项
+
+###### PicProcesser.CompressOptions
+参数|类型|默认值|说明
+---|---|---|---
 `ratio` | number | `0.5` | 压缩比例，`0`-`1` 之间的小数
 `maxWidth` | number | `null` | 图片宽度上限，>1的整数，单位px，`0` 或 `null` 表示不限制，输出图片的高度会等比例缩放
 `mime` | string | `image/jpeg` | 输出图片类型

@@ -1,4 +1,4 @@
-import PicProcesser from './src/pic-processer.ts'
+import PicProcesser from 'dist/pic-processer.es.js'
 
 export {
     PicProcesser as default
