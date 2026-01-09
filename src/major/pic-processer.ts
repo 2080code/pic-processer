@@ -24,15 +24,15 @@ function getDataURL(file:File|Blob):Promise<string> {
             resolve(reader?.result as string)
         })
         reader.addEventListener('error', () => {
-            reject(new Error('getDataURL error!'))
+            reject(new Error('getDataURL error'))
         })
         reader.addEventListener('abort', () => {
-            reject(new Error('getDataURL abort!'))
+            reject(new Error('getDataURL abort'))
         })
         if (file && [Blob,File].some(type=>file instanceof type)) {
             reader.readAsDataURL(file)
         } else {
-            reject(new Error('Unspecified file!'))
+            reject(new Error('Unspecified file'))
         }
     })
 }
@@ -76,7 +76,7 @@ function compress(file:File|Blob, options?:PicProcesserTypes.CompressOptions):Pr
 
         // 尺寸限制必须大于1，否则canvas是渲染不出内容的
         if(maxWidth && maxWidth<2) {
-            reject(new Error('maxWidth must be greater than 1!'))
+            reject(new Error('maxWidth must be greater than 1px'))
         }
 
         img.addEventListener('loadstart', () => {
@@ -100,10 +100,10 @@ function compress(file:File|Blob, options?:PicProcesserTypes.CompressOptions):Pr
             resolve(dataURL)
         })
         img.addEventListener('error', () => {
-            reject(new Error('compress error!'))
+            reject(new Error('compress error'))
         })
         img.addEventListener('abort', () => {
-            reject(new Error('compress abort!'))
+            reject(new Error('compress abort'))
         })
 
         if (file && [Blob,File].some(type=>file instanceof type)) {
@@ -113,7 +113,7 @@ function compress(file:File|Blob, options?:PicProcesserTypes.CompressOptions):Pr
                 reject(error)
             })
         } else {
-            reject(new Error('no file!'))
+            reject(new Error('no file'))
         }
 
         

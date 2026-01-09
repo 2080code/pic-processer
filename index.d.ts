@@ -1,1 +1,0 @@
-declare module '@2080code/pic-processer'
