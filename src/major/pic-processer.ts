@@ -39,11 +39,11 @@ function getDataURL(file:File|Blob):Promise<string> {
 
 /**
  * dataURL 转为 File
- * @param {String} fileName 文件名
  * @param {String} dataURL
+ * @param {String} fileName 文件名
  * @returns {File}
  */
-function dataURLtoFile(fileName:string, dataURL:string):File {
+function dataURLtoFile(dataURL:string, fileName:string):File {
   const arr = dataURL.split(',');
   const mime = (arr[0]||'').match(/:(.*?);/)?.[1];
   const bstr = window.atob(arr[1]||'');

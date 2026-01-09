@@ -15,7 +15,7 @@ declare namespace PicProcesserTypes {
 declare class PicProcesserClass{
     constructor()
     getDataURL(file: File|Blob): Promise<string>
-    dataURLtoFile(fileName: string, dataURL: string): File
+    dataURLtoFile(dataURL: string,fileName: string): File
     compress(file: File|Blob, options?: PicProcesserTypes.CompressOptions): Promise<string>
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@2080code/pic-processer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "图片压缩、改变图片尺寸、File 和 dataURL 互转",
   "type": "module",
   "main": "dist/pic-processer.es.js",
@@ -14,7 +14,8 @@
     "build:lib": "vite build --config vite.config.lib.ts",
     "build:demo": "vue-tsc -b && vite build --config vite.config.demo.ts",
     "build": "node build.js",
-    "preview": "vite preview --config vite.config.demo.ts"
+    "preview": "vite preview --config vite.config.demo.ts",
+    "publish": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",

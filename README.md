@@ -32,7 +32,7 @@ const picProcesser = new PicProcesser()
 // 应用：
 picProcesser.getDataURL(file)
 picProcesser.compress(file, 0.2)
-picProcesser.getDataURL(file)
+picProcesser.dataURLtoFile(dataURL, 'export.jpg')
 ```
 
 ***
@@ -88,14 +88,14 @@ picProcesser.getDataURL(file)
 dataURL 转 File 对象
 
 ```javascript
-picProcesser.dataURLtoFile('export.jpg', dataURL)
+picProcesser.dataURLtoFile(dataURL, 'export.jpg')
 ```
 
 ##### 参数
 参数|类型|默认值|说明
 ---|---|---|---
-`fileName` | string | `null` | 输出文件名
 `dataURL` | string | `null` | base64编码
+`fileName` | string | `null` | 输出文件名
 
 ##### 返回
 返回值|类型|说明
