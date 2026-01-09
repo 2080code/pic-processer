@@ -19,6 +19,6 @@ declare class PicProcesserClass{
     compress(file: File|Blob, options?: PicProcesserTypes.CompressOptions): Promise<string>
 }
 
-declare module 'pic-processer' {
-    export { PicProcesserClass as default }
+declare module '@2080code/pic-processer'{
+    export default PicProcesserClass
 }
