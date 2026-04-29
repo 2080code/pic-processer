@@ -38,26 +38,28 @@ picProcesser.dataURLtoFile(dataURL, 'export.jpg')
 ***
 
 ## 方法
+
 ### compress
 压缩图片质量、改变图片尺寸，输出 dataURL
 
 ```javascript
 picProcesser.compress(file, 0.2, 1000, 'image/png')
 ```
-##### 参数
+
+#### 参数
 参数|类型|默认值|说明
 ---|---|---|---
 `file` | File | `null` | 图片文件
-`options` | [PicProcesser.CompressOptions](######PicProcesser.CompressOptions) | `{ratio: 0.5, maxWidth: null,mime:'image/jpeg'}` | 压缩选项
+`options` | [PicProcesserTypes.CompressOptions](#####PicProcesserTypes.CompressOptions) | `{ratio: 0.5, maxWidth: null,mime:'image/jpeg'}` | 压缩选项
 
-###### PicProcesser.CompressOptions
+##### PicProcesserTypes.CompressOptions
 参数|类型|默认值|说明
 ---|---|---|---
 `ratio` | number | `0.5` | 压缩比例，`0`-`1` 之间的小数
-`maxWidth` | number | `null` | 图片宽度上限，>1的整数，单位px，`0` 或 `null` 表示不限制，输出图片的高度会等比例缩放
+`maxWidth` | number | `null` | 图片宽度上限，>1的整数，单位px，`0` 或 `null` 表示不限制，输出图片的高度会依此等比例缩放
 `mime` | string | `image/jpeg` | 输出图片类型
 
-##### 返回
+#### 返回
 返回值|类型|说明
 ---|---|---
 `Promise<string>` | `Promise<string>` | 压缩后的图片 dataURL 编码
@@ -72,12 +74,12 @@ File 转 dataURL
 ```javascript
 picProcesser.getDataURL(file)
 ```
-##### 参数
+#### 参数
 参数|类型|默认值|说明
 ---|---|---|---
 `file` | File \| Blob | `null` | 图片文件
 
-##### 返回
+#### 返回
 返回值|类型|说明
 ---|---|---
 `Promise<FileReader>` | `Promise<FileReader>` | 完整的 FileReader 对象，通过`result`属性获取 base64 编码
@@ -91,13 +93,13 @@ dataURL 转 File 对象
 picProcesser.dataURLtoFile(dataURL, 'export.jpg')
 ```
 
-##### 参数
+#### 参数
 参数|类型|默认值|说明
 ---|---|---|---
 `dataURL` | string | `null` | base64编码
 `fileName` | string | `null` | 输出文件名
 
-##### 返回
+#### 返回
 返回值|类型|说明
 ---|---|---
 `Promise<File>` | `Promise<File>` | File 对象
