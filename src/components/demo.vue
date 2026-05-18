@@ -135,9 +135,10 @@ async function compressOptionChange(){
     )
     // dataURLtoFile
     exportedFile.value = await picProcesser.dataURLtoFile(
-      exportedFileName.value || file.value.name,
-      compressedDataURL.value
+      compressedDataURL.value,
+      exportedFileName.value || file.value.name
     )
+    console.log(exportedFile.value,exportedFile.value.name)
     return compressedDataURL.value
   }else{
     return ''
